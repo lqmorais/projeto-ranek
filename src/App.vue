@@ -78,4 +78,25 @@ img {
 #main {
   flex: 1;
 }
+
+input,
+text-area {
+  border-radius: 4px;
+  border: 1 px solid #fff;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 15px;
+}
+
+input:hover,
+text-area:hover,
+input:focus,
+text-area:focus {
+  outline: none;
+  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+  border-color: #87f;
+}
 </style>
