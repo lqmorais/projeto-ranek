@@ -2,7 +2,9 @@
   <div id="app">
     <TheHeader />
     <main id="main">
-      <router-view />
+      <transition mode="out-in">
+        <router-view />
+      </transition>
     </main>
     <TheFooter />
   </div>
@@ -84,10 +86,14 @@ img {
   min-height: 100vh;
 }
 
+label {
+  margin-bottom: 5px;
+}
+
 input,
 text-area {
   border-radius: 4px;
-  border: 1 px solid #fff;
+  border: 1px solid #fff;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
   transition: all 0.3s;
