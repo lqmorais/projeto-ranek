@@ -4,7 +4,6 @@
     <main id="main">
       <router-view />
     </main>
-
     <TheFooter />
   </div>
 </template>
@@ -79,6 +78,12 @@ img {
   flex: 1;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 input,
 text-area {
   border-radius: 4px;
@@ -98,5 +103,23 @@ text-area:focus {
   outline: none;
   box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
   border-color: #87f;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter {
+  transform: translate3d(0, -20px, 0);
+}
+
+.v-leave-to {
+  transform: translate3d(0, 20px, 0);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
 }
 </style>

@@ -20,10 +20,4 @@ footer {
   position: relative;
   top: 75px;
 }
-
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 </style>
