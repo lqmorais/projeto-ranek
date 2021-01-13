@@ -6,8 +6,14 @@
     <input id="email" name="email" type="email" v-model="email" />
     <label for="senha">Senha</label>
     <input id="senha" name="senha" type="password" v-model="senha" />
-    <label for="cep">Cep</label>
-    <input id="cep" name="cep" type="text" v-model="cep" />
+    <label for="cep">CEP</label>
+    <input
+      id="cep"
+      name="cep"
+      type="text"
+      v-model="cep"
+      @keyup="preencherCep"
+    />
     <label for="rua">Rua</label>
     <input id="rua" name="rua" type="text" v-model="rua" />
     <label for="numero">Número</label>
@@ -26,6 +32,7 @@
 
 <script>
 import { mapFields } from "@/helpers.js";
+import { getCep } from "@/services/services.js";
 
 export default {
   computed: {
@@ -44,6 +51,19 @@ export default {
       base: "usuario",
       mutation: "UPDATE_USUARIO",
     }),
+  },
+  methods: {
+    preencherCep() {
+      const cep = this.cep.replace(/\D/g, "");
+      if (cep.length === 8) {
+        getCep(cep).then((r) => {
+          this.rua = r.data.logradouro;
+          this.bairro = r.data.bairro;
+          this.estado = r.data.uf;
+          this.cidade = r.data.localidade;
+        });
+      }
+    },
   },
 };
 </script>
