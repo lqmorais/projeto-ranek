@@ -91,7 +91,7 @@ label {
 }
 
 input,
-text-area {
+textarea {
   border-radius: 4px;
   border: 1px solid #fff;
   padding: 15px;
@@ -103,9 +103,9 @@ text-area {
 }
 
 input:hover,
-text-area:hover,
+textarea:hover,
 input:focus,
-text-area:focus {
+textarea:focus {
   outline: none;
   box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
   border-color: #87f;
