@@ -35,6 +35,7 @@ import { mapFields } from "@/helpers.js";
 import { getCep } from "@/services/services.js";
 
 export default {
+  name: "UsuarioForm",
   computed: {
     ...mapFields({
       fields: [

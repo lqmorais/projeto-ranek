@@ -42,7 +42,7 @@ export default {
             this.getUsuarioProdutos();
           })
           .catch((error) => {
-            console.log(error);
+            console.log(error.response);
           });
       }
     },
